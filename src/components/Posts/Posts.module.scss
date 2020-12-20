@@ -1,0 +1,37 @@
+.post {
+    border: 1px solid var(--borderColor);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    transition: .3s background;
+    
+    &:hover {
+        background: var(--postBackgroundColor)
+    }
+
+    &_title {
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    &_text {
+        margin-top: 20px;
+        color: var(--lightBlackColor);
+        line-height: 30px;
+    }
+
+    &_info {
+        font-style: italic;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+}
+
+.preload_posts {
+    height: 190px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background: rgb(242, 242, 242);
+}
