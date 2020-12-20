@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-posts-app/static/css/main.0b63025f.chunk.css",
+    "main.js": "/react-posts-app/static/js/main.1268eac2.chunk.js",
+    "main.js.map": "/react-posts-app/static/js/main.1268eac2.chunk.js.map",
+    "runtime-main.js": "/react-posts-app/static/js/runtime-main.97d12e13.js",
+    "runtime-main.js.map": "/react-posts-app/static/js/runtime-main.97d12e13.js.map",
+    "static/js/2.b4d44809.chunk.js": "/react-posts-app/static/js/2.b4d44809.chunk.js",
+    "static/js/2.b4d44809.chunk.js.map": "/react-posts-app/static/js/2.b4d44809.chunk.js.map",
+    "static/js/3.acabaf8d.chunk.js": "/react-posts-app/static/js/3.acabaf8d.chunk.js",
+    "static/js/3.acabaf8d.chunk.js.map": "/react-posts-app/static/js/3.acabaf8d.chunk.js.map",
+    "index.html": "/react-posts-app/index.html",
+    "static/css/main.0b63025f.chunk.css.map": "/react-posts-app/static/css/main.0b63025f.chunk.css.map",
+    "static/js/2.b4d44809.chunk.js.LICENSE.txt": "/react-posts-app/static/js/2.b4d44809.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.97d12e13.js",
+    "static/js/2.b4d44809.chunk.js",
+    "static/css/main.0b63025f.chunk.css",
+    "static/js/main.1268eac2.chunk.js"
+  ]
+}
