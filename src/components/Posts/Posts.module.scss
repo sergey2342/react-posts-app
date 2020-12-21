@@ -6,6 +6,11 @@
     cursor: pointer;
     display: block;
     transition: .3s background;
+    opacity: 0;
+    
+    & :global {
+        animation: .3s showPost ease forwards;     
+    }
     
     &:hover {
         background: var(--postBackgroundColor)

@@ -22,7 +22,7 @@ const Posts = () => {
 
     return (
         <div>
-            {/* <AddPosts /> */}
+            <AddPosts />
             <div className="main-title">Все посты</div>
             {
                 posts && posts.length === 0

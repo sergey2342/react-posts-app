@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import Preloading from '../Preloading/Preloading'
 import * as styles from './Content.module.scss'
 
+
 const Posts = React.lazy(() => import('../Posts/Posts'))
 const SinglePost = React.lazy(() => import('../SinglePost/SinglePost'))
 

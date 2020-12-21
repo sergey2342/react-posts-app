@@ -40,3 +40,30 @@ export const loadingIcon = makeStyles({
         }
     }
 }) 
+
+export const InputStyle = makeStyles({
+    root: {
+        '& label': {
+            color: 'var(--lightBlackColor)'
+        },
+        '& label.Mui-focused': {
+            color: 'var(--blueColor)'
+        },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: 'var(--borderColor)',
+                transition: '.3s border-color'
+            },
+            '&:hover fieldset': {
+                borderColor: 'var(--lightBlackColor)'
+            },
+            '&.Mui-focused fieldset': {
+                border: '1px solid var(--blueColor)'
+            }
+        },
+        '& input, & textarea': {
+            color: 'var(--mainColor)',
+            transition: '.3s color'
+        }
+    }
+})

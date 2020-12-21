@@ -16,8 +16,7 @@ const App = React.lazy(() => import('./components/App/App'))
 // console.log(process.env.PUBLIC_URL)
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <CookiesProvider>
                 <Provider store={store}>
                     <Suspense fallback={<Preloading type="app" />}>
@@ -25,8 +24,7 @@ ReactDOM.render(
                     </Suspense>
                 </Provider>
             </CookiesProvider>
-        </Router>
-    </React.StrictMode>,
+        </Router>,
     document.getElementById('root')
 );
 
