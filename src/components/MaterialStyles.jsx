@@ -1,4 +1,4 @@
-import { makeStyles, withStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 export const IconThemeStyle = makeStyles({
     root: {
@@ -16,11 +16,24 @@ export const ButtonStyle = makeStyles({
         '& .MuiButton-label': {
             fontSize: '16px',
             textTransform: 'none'
-        },
-        '& .MuiTouchRipple-root': {
-
         }
     }, 
+
+    smile: {
+        '&:hover': {
+            backgroundColor: 'rgb(29, 161, 242, .15) !important',
+            '& .MuiButton-label': {
+                color: 'var(--blueColor)'
+            } 
+        },
+        '& .MuiButton-label': {
+            color: 'var(--mainColor)',
+            transition: '.2s color'
+        },
+        '& .MuiTouchRipple-root': {
+            color: 'var(--blueColor)',
+        }
+    },
 
     outlineBlue : {
         '& .MuiButton-label': {

@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from 'react'
 import { useCookies } from 'react-cookie'
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Brightness2Icon from '@material-ui/icons/Brightness2';
@@ -8,9 +9,18 @@ import { IconThemeStyle } from '../MaterialStyles'
 import * as styles from './ThemeButton.module.scss'
 
 
-const ThemeButton = () => {
+const ThemeButton = React.memo(() => {
     const [cookies, setCookie] = useCookies(['theme'])
     const classesIconThemeStyle = IconThemeStyle()
+    console.log('button render')
+
+    useEffect(() => {
+        if(cookies.theme === undefined) {
+            setCookie('theme', 'light', { path: '/' })
+        } else {
+            document.getElementsByTagName('html')[0].setAttribute('data-theme', cookies.theme)
+        }
+    }, [])
 
     const toggleTheme = (type) => {
         setCookie('theme', type, { path: '/' })
@@ -32,7 +42,7 @@ const ThemeButton = () => {
             </label>
         </div>
     );
-}
+})
 
 
 export default ThemeButton

@@ -17,6 +17,7 @@ const Post = () => {
     const stylesButton = ButtonStyle()
 
 
+    console.log('single post render')
 
     if(!post) {
         dispatch(getSinglePostThunk(postId))

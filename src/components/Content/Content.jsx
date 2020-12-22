@@ -9,7 +9,8 @@ const Posts = React.lazy(() => import('../Posts/Posts'))
 const SinglePost = React.lazy(() => import('../SinglePost/SinglePost'))
 
 
-const Content = () => {
+const Content = React.memo(() => {
+    console.log('content render')
 
     return (
         <div className={styles.content}>
@@ -19,6 +20,7 @@ const Content = () => {
             </Switch>
         </div>
     )
-}
+})
+
 
 export default Content

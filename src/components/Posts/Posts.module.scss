@@ -1,6 +1,7 @@
 .post {
     border: 1px solid var(--borderColor);
     padding: 20px;
+    padding-bottom: 10px;
     margin: 10px 0;
     border-radius: 10px;
     cursor: pointer;
@@ -31,6 +32,22 @@
         font-style: italic;
         font-size: 14px;
         margin-top: 15px;
+    }
+
+    &_reaction {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        button > * {
+            pointer-events: none;
+        }
+
+        svg {
+            width: 30px;
+            margin-right: 6px;
+        }
     }
 }
 
