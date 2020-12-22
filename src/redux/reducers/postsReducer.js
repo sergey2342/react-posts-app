@@ -1,9 +1,11 @@
 import { postsApi } from '../../services/api'
+import { reset } from 'redux-form'
 
 export const GET_POSTS = 'GET_POSTS'
 export const GET_SINGLE_POST = 'GET_SINGLE_POST'
 export const REACTION_ADDED = 'REACTION_ADDED'
 export const REACTION_ADDED_ERROR = 'REACTION_ADDED_ERROR'
+export const POST_ADDED = 'POST_ADDED'
 
 
 const initialState = {
@@ -57,6 +59,13 @@ const postsReducer = (state = initialState, action) => {
                 error: null,
                 posts: reactionRemove
             }
+        case POST_ADDED:
+            return {
+                ...state,
+                loading: false,
+                error: null,
+                posts: [...state.posts, action.payload]
+            }
         default: 
             return state
     }
@@ -79,4 +88,12 @@ export const reactionAddedThunk = (id, target) => dispatch => {
     dispatch({ type: REACTION_ADDED, payload: {id, target}})
     postsApi.reactionAdded(id, target)
         .catch(() => dispatch({ type: REACTION_ADDED_ERROR, payload: {id, target}}))
+}
+
+export const PostAddedThunk = formData => dispatch => {
+    postsApi.postAdded(formData)
+        .then(({ data }) => {
+            dispatch({ type: POST_ADDED, payload: {...formData, id: data.name} })
+            dispatch(reset('add-post'))
+        })
 }
