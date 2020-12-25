@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-posts-app"]=this["webpackJsonpreact-posts-app"]||[]).push([[8],{378:function(t,e,n){"use strict";n.r(e);var s=n(15),c=n(0),o=n.n(c),a=n(4),r=n(62),p=n(84),i=o.a.memo((function(){var t=Object(r.d)((function(t){return t.auth.isAuth})),e=Object(r.c)();return console.log("login render"),t?Object(s.jsx)(a.a,{to:"/posts"}):Object(s.jsx)("div",{className:"",onClick:function(){return e({type:p.a})},children:"hello"})}));e.default=i}}]);
+//# sourceMappingURL=8.e02a76cd.chunk.js.map
