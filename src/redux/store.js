@@ -4,8 +4,10 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import { reducer as formReducer } from 'redux-form'
 
 import postsReducer from './reducers/postsReducer'
+import authReducer from './reducers/authReducer'
 
 const reducer = combineReducers({
+    auth: authReducer,
     posts: postsReducer,
     form: formReducer
 })

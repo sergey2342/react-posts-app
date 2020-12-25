@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
@@ -8,10 +9,12 @@ import { ButtonStyle } from '../MaterialStyles'
 import * as styles from './SinglePost.module.scss'
 import { getSinglePostThunk } from '../../redux/reducers/postsReducer'
 import TimeAgo from '../TimeAgo/TimeAgo'
+import PostReaction from '../PostReaction/PostReaction'
 
 
 const Post = () => {
     const { postId } = useParams()
+    useSelector(state => state.posts.posts)
     const post = useSelector(state => state.posts.posts.find(post => post.id === postId))
     const dispatch = useDispatch()
     const stylesButton = ButtonStyle()
@@ -40,6 +43,7 @@ const Post = () => {
                 </div>
                 <div className={styles.single_post_title}>{post.title}</div>
                 <div className={styles.single_post_text}>{post.text}</div>
+                <PostReaction marks={post.marks} id={post.id}/>
             </div>
         </>
     )

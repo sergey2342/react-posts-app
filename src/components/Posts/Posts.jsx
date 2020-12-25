@@ -47,6 +47,7 @@ const Posts = () => {
                                     <span>{name}, </span>
                                     <TimeAgo timestamp={date}/>
                                 </div>
+                                
                                 <PostReaction marks={marks} id={id}/>
                             </div>
                         )
